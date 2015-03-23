@@ -1,0 +1,7 @@
+data/elasticsearch/data
+data/elasticsearch/log
+data/elasticsearch/plugins
+data/influxdb/.pre_db_created
+data/influxdb/db
+data/influxdb/raft
+data/influxdb/wal
