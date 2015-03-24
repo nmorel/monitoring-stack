@@ -1,3 +1,7 @@
+*.iml
+.idea/
+target/
+
 data/elasticsearch/data
 data/elasticsearch/log
 data/elasticsearch/plugins
