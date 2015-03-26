@@ -169,6 +169,11 @@
             <artifactId>metrics-jetty9</artifactId>
             <version>${metrics.version}</version>
         </dependency>
+        <dependency>
+            <groupId>net.alchim31</groupId>
+            <artifactId>metrics-influxdb</artifactId>
+            <version>0.6.0</version>
+        </dependency>
 
         <!-- Logs -->
         <dependency>

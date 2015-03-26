@@ -40,6 +40,19 @@ sudo docker build -t=monitoring/graphana .
 # Création du container
 sudo docker create -p 8082:80 --volumes-from monitoring_data --link elasticsearch:elasticsearch --link influxdb:influxdb --name graphana monitoring/graphana
 
+##### Appli
+# Build de l'image
+sudo docker build -t=monitoring/appli .
+# Création du container
+sudo docker create -p 8080:8080 --volumes-from monitoring_data --link influxdb:influxdb --name appli monitoring/appli
+sudo docker create -p 8080:8080 --volumes-from monitoring_data --name appli monitoring/appli
+
+##### Logstash
+# Build de l'image
+sudo docker build -t=monitoring/logstash .
+# Création du container
+sudo docker create --volumes-from monitoring_data --link elasticsearch:elasticsearch --name logstash monitoring/logstash
+
 ##### Lancement
 sudo docker start elasticsearch influxdb kibana graphana
 
